@@ -1,0 +1,2 @@
+*target filter=lfs diff=lfs merge=lfs -text
+*rlib filter=lfs diff=lfs merge=lfs -text
