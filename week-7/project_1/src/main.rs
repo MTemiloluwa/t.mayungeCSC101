@@ -18,7 +18,7 @@ fn main() {
     
     let choice: u32 = choice.trim().parse().expect("Please enter a valid number");
 
-    // Using basic if/else statements instead of match
+    // Using basic if/else statements 
     if choice == 1 {
         let result = calculate_trapezium();
         println!("The area of the trapezium is: {}", result);
