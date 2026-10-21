@@ -21,7 +21,7 @@ fn find_top_developer(candidates_slice: &[(String, u8)]){
     //We do this so that the we have a baseline and a number we can use to compare with the other developer
     //By doing this the loop has an accurate and realistic baseline to start comparing against right away
     let mut top_name = &candidates_slice[0].0;
-    let mut max_years = candidates_slice[0].1;
+    let mut                       max_years = candidates_slice[0].1;
      // walk it through a loop Thos is the loop I was talking about above before you start the main function
      //a loop ought to be running already as we go on you will see where we would need this
      for candidate in candidates_slice{

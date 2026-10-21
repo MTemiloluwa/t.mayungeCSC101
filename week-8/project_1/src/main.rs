@@ -174,7 +174,7 @@ fn main() {
                     
                     if field == "quit" {
                         println!("\nThank you for using the APS Checker. Goodbye!👋");
-                        std::process::exit(0);
+                        continue;
                     }
                     if field == "help" {
                         show_help();
