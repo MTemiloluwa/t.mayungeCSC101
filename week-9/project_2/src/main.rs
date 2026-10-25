@@ -10,6 +10,9 @@ let records = [
 "Adekunle Gold, EEE11020202, Electrical, 200",
 "Blanca Edemah, MEE10202001, Mechanical, 100",
 ];
+for record in records{
+println!("{}", record);
+}
 
 let mut file = File::create("SMIS.csv").unwrap();
 file.write_all("PAU Student Management Information System\n".as_bytes()).unwrap();
