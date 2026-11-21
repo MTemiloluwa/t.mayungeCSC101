@@ -2,26 +2,38 @@ use std::fs::File;
 use std::io::Write;
 
 fn main (){
-    let header = ["Commissioner","Ministry","Zone"];
-    let min1 = ["Algbogun Alamba Daudu","Internal Affairs","South west"];
-    let min2 = ["Murtala Afeez Bendu","Justice","North East"];
-    let min3 = ["Okoruocha Calistus Ogbona","Defense","South South"];
-    let min4 = ["Adewale Jimoh Akanbi","Power & Steel","South West"];
-    let min5 = ["Osazuwa Faith Etieye","Petroleum","South East"];
+    let commissioners = [
+    "Algbogun Alamba Daudu",
+    "Murtala Afeez Bendu",
+    "Okorocha Calistus Ogbona",
+    "Adewale Jimoh Akanbi",
+    "Osazuwa Faith Etieye",
+    ];
 
-    println!("{:?}", header);
-    println!("{:?}", min1);
-    println!("{:?}", min2);
-    println!("{:?}", min3);
-    println!("{:?}", min4);
-    println!("{:?}", min5);
+    let ministry =[
+    "Internal Affairs",
+    "Justice",
+    "Defense",
+    "Power and Steel",
+    "Petroleum",
+    ];
 
-    let mut file = File::create("EFCC.csv").unwrap();
-    file.write_all("Convicted Ministers\n".as_bytes()).unwrap();
-    let rows = [header, min1, min2, min3, min4, min5];
-    for row in rows{
-        let dataset = format!("{}, {}, {},\n", row[0], row[1], row[2]);
-        file.write_all(dataset.as_bytes()).unwrap();
-    }
-    println!("Data has been successfully saved");
+    let zone = [
+    "South West",
+    "North East",
+    "South South",
+    "South West",
+    "South East",
+    ];
+
+    let mut com_1 = File::create("commissioners.csv").unwrap();
+    let mut min_1 = File::create("ministry.csv").unwrap();
+    let mut zon_1 = File::create("zone.csv").unwrap();
+
+    com_1.write_all(commissioners.as_bytes()).unwrap();
+    min_1.write_all(ministry.as_bytes()).unwrap();
+    zon_1.write_all(zone.as_bytes()).unwrap();
+
+
+
 }
